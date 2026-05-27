@@ -14,7 +14,7 @@ const info = document.getElementById("info");
 
 async function getData(lat, long) {
     const response = await fetch(
-        `http://localhost:5000/weather?lat=${lat}&lon=${long}`
+        `https://weatherappbackend-y59x.onrender.com/weather?lat=${lat}&lon=${long}`
     );
     return await response.json();
 }
