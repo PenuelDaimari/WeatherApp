@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #050816, #0f172a);
+    gap: 20px;
+    padding: 30px;
+}
+
+#input {
+    display: flex;
+    gap: 12px;
+}
+
+input {
+    background: rgba(255,255,255,0.05);
+    color: white;
+    border: 2px solid #38bdf8;
+    border-radius: 12px;
+    padding: 12px 18px;
+    width: 260px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+input::placeholder {
+    color: #f9a8d4;
+}
+
+input:focus {
+    border-color: #67e8f9;
+    box-shadow: 0 0 15px rgba(103, 232, 249, 0.5);
+}
+
+button {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#name {
+    color: white;
+    background: rgba(255,255,255,0.05);
+    border: 2px solid #22d3ee;
+    border-radius: 14px;
+    padding: 14px 20px;
+    text-align: center;
+    font-size: 18px;
+    max-width: 500px;
+    line-height: 1.5;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(255,255,255,0.06);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 18px;
+
+    padding: 25px 35px;
+    min-width: 350px;
+
+    color: aliceblue;
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.35),
+        0 0 20px rgba(59,130,246,0.12);
+}
+
+#city-name {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#info p {
+    font-size: 17px;
+    opacity: 0.95;
+}
+
+@media screen and (max-width: 600px) {
+
+    #main {
+        padding: 20px 15px;
+        gap: 18px;
+    }
+
+    #input {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    input {
+        width: 100%;
+        max-width: 320px;
+        font-size: 15px;
+        padding: 12px 14px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 320px;
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    #name {
+        width: 100%;
+        max-width: 340px;
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    #info {
+        width: 100%;
+        max-width: 340px;
+        min-width: unset;
+
+        padding: 20px 18px;
+
+        gap: 8px;
+    }
+
+    #city-name {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #info p {
+        font-size: 15px;
+        text-align: center;
+        word-break: break-word;
+    }
+}
